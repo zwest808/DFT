@@ -1,0 +1,37 @@
+&CONTROL
+  calculation = 'nscf',
+  restart_mode = 'from_scratch',
+  outdir = './tmp/',
+  pseudo_dir = '../pseudo/',
+  prefix = 'aln'
+  verbosity = '{VERBOSITY}',
+/
+&SYSTEM
+  ibrav = 4,
+  celldm(1) = {LATTICE_PARAM_A},
+  celldm(3) = {LATTICE_PARAM_C},
+  nat = {NAT},
+  ntyp = {NTYP},
+  nbnd = {NBNDS},
+  occupations = '{OCCUPATION}',
+  smearing = '{SMR_METHOD}',
+  ecutwfc = {ECUTWFC},
+  degauss = .02,
+  ecutrho = {ECUTRHO},
+/
+&ELECTRONS
+  electron_maxstep = {E_MAXSTEP},
+  conv_thr = {SCF_CONV_THR},
+  mixing_mode = '{MIX_MODE}',
+  mixing_beta = {MIX_BETA},
+  mixing_ndim = {MIXING_NDIM},
+  diago_david_ndim=6,
+/
+!CELL_PARAMETERS (angstrom)
+!{CELL_PARAM} make it CELL_PARAMS if you want it replaced, for bands unneeded
+ATOMIC_SPECIES
+{PSEUDOS}
+ATOMIC_POSITIONS {crystal}
+{ATOMIC_POSITIONS}
+K_POINTS {automatic}
+{K_POINTS}

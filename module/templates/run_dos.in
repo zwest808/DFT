@@ -1,0 +1,5 @@
+$DOS
+  outdir = './tmp/'
+  prefix = 'aln'
+  fildos = '{OUTPUT_DIR}/dos/dos'
+/

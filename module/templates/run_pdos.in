@@ -1,0 +1,5 @@
+$PROJWFC
+  prefix  = 'aln'
+  outdir  = './tmp'
+  filpdos = '{OUTPUT_DIR}/dos/pdos_files/'
+/

@@ -1,0 +1,216 @@
+
+     Program PWSCF v.6.0 (svn rev. 13079) starts on  7Aug2024 at 22:52:25 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    48 processors
+     R & G space division:  proc/nbgrp/npool/nimage =      48
+     Waiting for input...
+     Reading input from standard input
+Warning: card WF_COLLECT=.TRUE ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+
+     Atomic positions and unit cell read from directory:
+     ./tmp/aln.save/
+
+               file Zn.pbesol-dnl-rrkjus_psl.1.0.0.UPF: wavefunction(s)  3D renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     ELPA distributed-memory algorithm (size of sub-group:  4*  4 procs)
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         113      64     17                 5389     2326     337
+     Max         115      65     18                 5392     2331     342
+     Sum        5437    3103    859               258683   111743   16319
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      11.8643  a.u.
+     unit-cell volume          =    1155.7332 (a.u.)^3
+     number of atoms/cell      =           16
+     number of atomic types    =            3
+     number of electrons       =        73.00
+     number of Kohn-Sham states=           64
+     kinetic-energy cutoff     =      80.0000  Ry
+     charge density cutoff     =     560.0000  Ry
+     Exchange-correlation      = PBESOL ( 1  4 10  8 0 0)
+
+     celldm(1)=  11.864350  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (  -0.500000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.799089 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.577350 -0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000 -0.000000  1.251425 )  
+
+
+     PseudoPot. # 1 for Al read from file:
+     pseudo/Al.pbesol-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: dbcefca01057e646ce9c389674ce64eb
+     Pseudo is Ultrasoft + core correction, Zval =  3.0
+     Generated using "atomic" code by A. Dal Corso  v.6.3
+     Using radial grid of 1135 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for  N read from file:
+     pseudo/N.pbesol-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 006b6b9dfb5634708511e9f3c875aba4
+     Pseudo is Ultrasoft + core correction, Zval =  5.0
+     Generated using "atomic" code by A. Dal Corso  v.6.3MaX
+     Using radial grid of 1085 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for Zn read from file:
+     pseudo/Zn.pbesol-dnl-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: a309e45c14cefa6e6c805f9539203eb5
+     Pseudo is Ultrasoft + core correction, Zval = 12.0
+     Generated using "atomic" code by A. Dal Corso  v.6.2.2
+     Using radial grid of 1201 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Al             3.00    26.98150     Al( 1.00)
+        N              5.00    14.00670      N( 1.00)
+        Zn            12.00    65.38000     Zn( 1.00)
+
+      6 Sym. Ops. (no inversion) found ( 4 have fractional translation)
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Zn  tau(   1) = (   0.2499995   0.1443379   0.3953266  )
+         2           Al  tau(   2) = (   0.0013817   0.5781486   0.3993193  )
+         3           Al  tau(   3) = (   0.7499995   0.1427418   0.3993193  )
+         4           Al  tau(   4) = (   0.4986173   0.5781486   0.3993193  )
+         5           Al  tau(   5) = (  -0.0031986   0.2905218   0.7980060  )
+         6           Al  tau(   6) = (  -0.2499995   0.7179936   0.7980060  )
+         7           Al  tau(   7) = (   0.5031996   0.2905218   0.7980060  )
+         8           Al  tau(   8) = (   0.2500005   0.7216875   0.7971723  )
+         9           N   tau(   9) = (   0.2499995   0.1443379   0.7274444  )
+        10           N   tau(  10) = (   0.0012044   0.5780462   0.7022690  )
+        11           N   tau(  11) = (   0.7499995   0.1429466   0.7022690  )
+        12           N   tau(  12) = (   0.4987946   0.5780462   0.7022690  )
+        13           N   tau(  13) = (  -0.0151628   0.2974294   0.2999492  )
+        14           N   tau(  14) = (  -0.2499995   0.7041785   0.2999492  )
+        15           N   tau(  15) = (   0.5151638   0.2974294   0.2999492  )
+        16           N   tau(  16) = (   0.2500005   0.7216875   0.3033679  )
+
+     number of k points=   121  gaussian smearing, width (Ry)=  0.0200
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:   258683 G-vectors     FFT dimensions: (  90,  90,  72)
+
+     Smooth grid:   111743 G-vectors     FFT dimensions: (  72,  72,  54)
+
+     Estimated max dynamical RAM per process >       8.88Mb
+
+     Estimated total allocated dynamical RAM >     426.30Mb
+
+     The potential is recalculated from file :
+     ./tmp/aln.save/charge-density.dat
+
+     Starting wfc are   69 randomized atomic wfcs
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.37E-07,  avg # of iterations = 14.8
+
+     total cpu time spent up to now is      211.4 secs
+
+     End of band structure calculation
+
+     Number of k-points >= 100: set verbosity='high' to print the bands.
+
+     Writing output data file aln.save
+
+     init_run     :      0.84s CPU      0.92s WALL (       1 calls)
+     electrons    :    192.39s CPU    209.15s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.06s CPU      0.07s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :    192.39s CPU    209.15s WALL (       1 calls)
+     v_of_rho     :      0.02s CPU      0.02s WALL (       1 calls)
+     newd         :      0.10s CPU      0.11s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.05s CPU      0.07s WALL (     121 calls)
+     cegterg      :    178.10s CPU    193.65s WALL (     140 calls)
+
+     Called by sum_band:
+
+     Called by *egterg:
+     h_psi        :     70.62s CPU     75.85s WALL (    2057 calls)
+     s_psi        :     11.18s CPU     11.22s WALL (    2057 calls)
+     g_psi        :      0.08s CPU      0.09s WALL (    1796 calls)
+     cdiaghg      :     47.30s CPU     52.43s WALL (    1917 calls)
+
+     Called by h_psi:
+     h_psi:pot    :     70.45s CPU     75.68s WALL (    2057 calls)
+     h_psi:calbec :     17.22s CPU     18.83s WALL (    2057 calls)
+     vloc_psi     :     41.62s CPU     45.20s WALL (    2057 calls)
+     add_vuspsi   :     11.60s CPU     11.64s WALL (    2057 calls)
+
+     General routines
+     calbec       :     17.21s CPU     18.82s WALL (    2057 calls)
+     fft          :      0.02s CPU      0.03s WALL (      13 calls)
+     ffts         :      0.01s CPU      0.01s WALL (       1 calls)
+     fftw         :     39.51s CPU     42.98s WALL (  128364 calls)
+     interpolate  :      0.01s CPU      0.01s WALL (       1 calls)
+     davcio       :      0.10s CPU      0.13s WALL (     121 calls)
+
+     Parallel routines
+     fft_scatter  :     20.04s CPU     22.40s WALL (  128378 calls)
+
+     PWSCF        :  3m14.98s CPU     3m31.92s WALL
+
+
+   This run was terminated on:  22:55:57   7Aug2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

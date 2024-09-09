@@ -1,0 +1,50 @@
+&CONTROL
+  calculation = 'vc-relax',
+  restart_mode = 'from_scratch',
+  prefix = 'aln',
+  outdir = './tmp/',
+  pseudo_dir = 'pseudo/',
+  etot_conv_thr = 1.0d-3,
+  forc_conv_thr = 1.0d-3,
+  tstress = .true.,
+  tprnfor = .true.,
+  verbosity = '{VERBOSITY}',
+/
+&SYSTEM
+  ibrav = 0,
+  !celldm(1) = 1.00 !6.13 !{LATTICE_PARAM_A}  ! a in Bohr (1 Bohr = 0.529177 Å, so a = 4.65 * 0.529177 Å ≈ 2.46 Å)
+  !celldm(3) = 1.633 !{LATTICE_PARAM_C}  ! c/a ratio; c is large to simulate a single layer
+  nat = {NAT},
+  ntyp = {NTYP},
+  nosym = .false.,
+  ecutwfc = {ECUTWFC},
+  ecutrho = {ECUTRHO},
+  occupations = '{OCCUPATION}',
+  smearing = '{SMR_METHOD}',
+  degauss = {DEGAUSS},
+/
+&ELECTRONS
+  electron_maxstep = {E_MAXSTEP},
+  conv_thr = {SCF_CONV_THR},
+  diago_thr_init = {DIAG_THRESHOLD},
+  mixing_mode = '{MIX_MODE}',
+  mixing_beta = {MIX_BETA},
+  mixing_ndim = {MIXING_NDIM},
+/
+&IONS
+  ion_dynamics = 'bfgs',
+/
+&CELL
+  cell_dynamics = 'bfgs',
+  press_conv_thr = .05
+  !cell_factor = 2.0,
+  cell_dofree = 'all'
+/
+CELL_PARAMETERS (angstrom)
+{CELL_PARAMS}
+ATOMIC_SPECIES
+{PSEUDOS}
+ATOMIC_POSITIONS {crystal}
+{ATOMIC_POSITIONS}
+K_POINTS {automatic}
+{K_POINTS}

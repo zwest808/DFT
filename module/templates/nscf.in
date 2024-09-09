@@ -1,0 +1,33 @@
+&CONTROL
+  calculation = 'nscf',
+  prefix = 'aln',
+  outdir = './tmp/',
+  pseudo_dir = 'pseudo/',
+  verbosity = '{VERBOSITY}',
+/
+&SYSTEM
+  ibrav = 0,
+  nat = {NAT},
+  ntyp = {NTYP},
+  occupations = '{OCCUPATION}',
+  smearing = '{SMR_METHOD}',
+  ecutwfc = {ECUTWFC},
+  degauss = {DEGAUSS},
+  ecutrho = {ECUTRHO},
+/
+&ELECTRONS
+  electron_maxstep = {E_MAXSTEP},
+  conv_thr = {NSCF_CONV_THR},
+  mixing_mode = '{MIX_MODE}',
+  mixing_beta = {MIX_BETA},
+  mixing_ndim = {MIXING_NDIM},
+  diago_david_ndim=6,
+/
+CELL_PARAMETERS (angstrom)
+{CELL_PARAMS}
+ATOMIC_SPECIES
+{PSEUDOS}
+ATOMIC_POSITIONS {crystal}
+{ATOMIC_POSITIONS}
+K_POINTS {automatic}
+{K_POINTS}
